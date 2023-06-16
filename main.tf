@@ -17,7 +17,7 @@ which need to be create **SUBNET GROUPS   .
 SUBNETS are tightly integrated with available zones.** 
     1 - due to that, we need to create sub-net groups. (aws_docdb_subnet_groups) */
 resource "aws_docdb_subnet_group" "main" {
-  name       =  "${vars.env}-docdb"
+  name       =  "${var.env}-docdb"
   subnet_ids = var.subnet_ids
 
   tags = merge(
