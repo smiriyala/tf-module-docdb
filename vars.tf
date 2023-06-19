@@ -10,5 +10,5 @@ variable "aws_docdb_subnet_group" {
     default = true
 }
 
-variable no_of_instances {}
-variable instance_class {}
+variable "no_of_instances" {}
+variable "instance_class" {}
