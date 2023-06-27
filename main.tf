@@ -24,6 +24,9 @@ resource "aws_docdb_subnet_group" "main" {
     var.tags,
     { Name = "${var.env}-subnet-group" }
   )
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "aws_docdb_cluster_instance" "cluster_instances" {
