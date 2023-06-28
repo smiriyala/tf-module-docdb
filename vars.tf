@@ -12,3 +12,5 @@ variable "aws_docdb_subnet_group" {
 
 variable "no_of_instances" {}
 variable "instance_class" {}
+variable "allow_subnets" {}
+variable "vpc_id" {}
