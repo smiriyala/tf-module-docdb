@@ -73,16 +73,6 @@ resource "aws_security_group" "main" {
 }
 
 
-resource "aws_docdb_subnet_group" "main" {
-  name       = "${var.env}-docdb"
-  subnet_ids = var.subnet_ids
-
-  tags = merge(
-    var.tags,
-    { Name = "${var.env}-subnet-group" }
-  )
-}
-
 resource "aws_ssm_parameter" "docdb_url_catalogue" {
   name  = "${var.env}.docdb.url.catalogue"
   type  = "String"
